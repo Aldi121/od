@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilih Gambar</title>
+
+    <!-- Memanggil file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Judul halaman -->
+    <h2>Choose your fighter</h2>
+
+    <!-- Wadah utama yang menampilkan gambar -->
+    <div id="imageContainer">
+        <!-- Gambar akan diubah oleh JavaScript -->
+        <img id="displayImage" src="" alt="Gambar">
+    </div>
+
+    <!-- Tombol navigasi dan tombol pilih -->
+    <div class="button-group">
+        <button id="prevBtn">Previous</button>  <!-- Tombol gambar sebelumnya -->
+        <button id="nextBtn">Next</button>      <!-- Tombol gambar berikutnya -->
+        <button id="selectBtn">Pilih fighter</button> <!-- Tombol pilih -->
+    </div>
+
+    <!-- Area untuk menampilkan hasil pilihan -->
+    <div id="selectedOutput"></div>
+
+    <!-- Memanggil file JavaScript eksternal -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Mengatur tampilan dasar halaman */
+body {
+    font-family: Arial, sans-serif; /* Font tulisan */
+    text-align: center;             /* Posisikan semua ke tengah */
+    padding: 20px;
+    background: #f4f4f4;            /* Warna latar belakang */
+}
+
+/* Wadah tempat gambar ditampilkan */
+#imageContainer {
+    width: 350px;
+    height: 350px;
+    margin: auto;                   /* Tengah secara horizontal */
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: white;
+    display: flex;                  /* Agar gambar di tengah */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;               /* Potong jika gambar terlalu besar */
+}
+
+/* Gambar menyesuaikan ukuran container */
+#imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Wadah tombol */
+.button-group {
+    margin-top: 20px;
+}
+
+/* Style untuk tombol */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;                /* Menampilkan cursor seperti tombol */
+}
+
+/* Tampilan tulisan setelah memilih gambar */
+#selectedOutput {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
