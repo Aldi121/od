@@ -3,10 +3,10 @@
 // Kamu bisa ganti link dengan gambar sendiri
 // ================================
 const images = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFbrmTAxfpRslTmOdATF6xwFuskv-V_XwkQ&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbercarHnrU2vTvVcNgUjoiJZMkaLnaH3eJkNyvpCWMLHXMyEVZi-pvUB1PrmWhcrziuM&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbhkpb5yZPjTkCHCBs3xB4cl16EKY1p4wi6-4N1q8cvSvRClc-Mrb-KcC2kg9eOeICspo&usqp=CAU",
-    "https://i.pinimg.com/564x/9c/c2/22/9cc22213881ce21d54027dbd10ad9277.jpg"
+    "paham.jpeg",
+    "ulangi.jpeg",
+    "amboi.jpeg",
+    "hmmm.jpg",
 ];
 
 // Menyimpan posisi gambar yang sedang ditampilkan
