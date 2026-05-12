@@ -172,7 +172,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     const Simpan = document.getElementById("btn-simpan");
-    Simpan.addEventListener("click", () => {
+    Simpan.addEventListener("click", async() => {
       // Ambil nilai dari setiap input
       const nama = document.getElementById("nama").value.trim();
       const kelas = document.getElementById("kelas").value.trim();
@@ -182,24 +182,42 @@
       const penanganan = document.getElementById("penanganan").value.trim();
 
       // Cek apakah ada yang masih kosong
-      if (nama !== "" && kelas !== "" && tanggal !== "" && jam_masuk !== "" && keterangan !== "" && penanganan !== "") {
-        Swal.fire({
-          title: 'Berhasil!',
-          text: 'Data berhasil di simpan',
-          icon: 'success',
-          confirmButtonText: 'OK',
-          confirmButtonColor: '#4CAF50'
-        });
-      } else {
-        Swal.fire({
-          title: 'Gagal!',
-          text: 'Harap isi semua kolom sebelum menyimpan!',
-          icon: 'error',
-          confirmButtonText: 'OK',
-          confirmButtonColor: '#FF0000'
-        });
+      if (!nama || !kelas || !tanggal || !jam_masuk || !keterangan || !penanganan) {
+        Swal.fire({ title: 'Gagal!', text: 'Harap isi semua kolom!', icon: 'error' });
+        return;
       }
-    });
+
+      const response = await fetch("http://localhost:8000/api/db_uks", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", 
+          "Accept": "application/json"
+
+        },
+        body: JSON.stringify({
+          nama: nama,
+          kelas: kelas,
+          tanggal: tanggal,
+          jam_masuk: jam_masuk,
+          keterangan: keterangan,
+          penanganan: penanganan,
+        })
+      });
+
+      if (response.ok) {
+        Swal.fire({ title: "Berhasil!",
+          text: "Data Berhasil disimpan",
+          icon: "success" });
+      }else{
+        Swal.fire({
+          title:"Gagal!",
+          text: "Data gagal disimpan",
+          icon: "error"
+        })
+      }
+    });   
+
   </script>
 </body>
+
 </html>
